@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E41F5ED1AE8097900158617 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E41F5EC1AE8097900158617 /* AppDelegate.mm */; };
+		9E41F5EF1AE8097900158617 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E41F5EE1AE8097900158617 /* main.m */; };
+		9E41F5F21AE8097900158617 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9E41F5F11AE8097900158617 /* ViewController.mm */; };
+		9E41F5F41AE8097900158617 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E41F5F31AE8097900158617 /* Images.xcassets */; };
+		9E41F5F71AE8097900158617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E41F5F51AE8097900158617 /* Main.storyboard */; };
+		9E41F6131AE809B300158617 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E41F6121AE809B300158617 /* CoreBluetooth.framework */; };
+		9E5F80611BC374C800BFD1D7 /* edk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5F80601BC374C800BFD1D7 /* edk.framework */; };
+		9E5F80621BC374C800BFD1D7 /* edk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5F80601BC374C800BFD1D7 /* edk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E41F6111AE809A200158617 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9E5F80621BC374C800BFD1D7 /* edk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9E41F5E61AE8097900158617 /* MotionDataLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionDataLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E41F5EA1AE8097900158617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E41F5EB1AE8097900158617 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9E41F5EC1AE8097900158617 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		9E41F5EE1AE8097900158617 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9E41F5F01AE8097900158617 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9E41F5F11AE8097900158617 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		9E41F5F31AE8097900158617 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9E41F5F61AE8097900158617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9E41F6121AE809B300158617 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9E5F80601BC374C800BFD1D7 /* edk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = edk.framework; path = ../../../../lib/Mac/edk.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E41F5E31AE8097900158617 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E41F6131AE809B300158617 /* CoreBluetooth.framework in Frameworks */,
+				9E5F80611BC374C800BFD1D7 /* edk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E41F5DD1AE8097900158617 = {
+			isa = PBXGroup;
+			children = (
+				9E5F80601BC374C800BFD1D7 /* edk.framework */,
+				9E41F6121AE809B300158617 /* CoreBluetooth.framework */,
+				9E41F5E81AE8097900158617 /* MotionData */,
+				9E41F5E71AE8097900158617 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E41F5E71AE8097900158617 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E41F5E61AE8097900158617 /* MotionDataLogger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E41F5E81AE8097900158617 /* MotionData */ = {
+			isa = PBXGroup;
+			children = (
+				9E41F5EB1AE8097900158617 /* AppDelegate.h */,
+				9E41F5EC1AE8097900158617 /* AppDelegate.mm */,
+				9E41F5F01AE8097900158617 /* ViewController.h */,
+				9E41F5F11AE8097900158617 /* ViewController.mm */,
+				9E41F5F31AE8097900158617 /* Images.xcassets */,
+				9E41F5F51AE8097900158617 /* Main.storyboard */,
+				9E41F5E91AE8097900158617 /* Supporting Files */,
+			);
+			name = MotionData;
+			path = MotionDataLogger;
+			sourceTree = "<group>";
+		};
+		9E41F5E91AE8097900158617 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E41F5EA1AE8097900158617 /* Info.plist */,
+				9E41F5EE1AE8097900158617 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E41F5E51AE8097900158617 /* MotionDataLogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E41F6061AE8097900158617 /* Build configuration list for PBXNativeTarget "MotionDataLogger" */;
+			buildPhases = (
+				9E41F5E21AE8097900158617 /* Sources */,
+				9E41F5E31AE8097900158617 /* Frameworks */,
+				9E41F5E41AE8097900158617 /* Resources */,
+				9E41F6111AE809A200158617 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotionDataLogger;
+			productName = MotionDataLogger;
+			productReference = 9E41F5E61AE8097900158617 /* MotionDataLogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E41F5DE1AE8097900158617 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = emotiv;
+				TargetAttributes = {
+					9E41F5E51AE8097900158617 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 9E41F5E11AE8097900158617 /* Build configuration list for PBXProject "MotionDataLogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E41F5DD1AE8097900158617;
+			productRefGroup = 9E41F5E71AE8097900158617 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E41F5E51AE8097900158617 /* MotionDataLogger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E41F5E41AE8097900158617 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E41F5F41AE8097900158617 /* Images.xcassets in Resources */,
+				9E41F5F71AE8097900158617 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E41F5E21AE8097900158617 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E41F5F21AE8097900158617 /* ViewController.mm in Sources */,
+				9E41F5EF1AE8097900158617 /* main.m in Sources */,
+				9E41F5ED1AE8097900158617 /* AppDelegate.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9E41F5F51AE8097900158617 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E41F5F61AE8097900158617 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E41F6041AE8097900158617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9E41F6051AE8097900158617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9E41F6071AE8097900158617 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../lib/Mac,
+				);
+				INFOPLIST_FILE = MotionDataLogger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9E41F6081AE8097900158617 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../../lib/Mac,
+				);
+				INFOPLIST_FILE = MotionDataLogger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E41F5E11AE8097900158617 /* Build configuration list for PBXProject "MotionDataLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E41F6041AE8097900158617 /* Debug */,
+				9E41F6051AE8097900158617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E41F6061AE8097900158617 /* Build configuration list for PBXNativeTarget "MotionDataLogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E41F6071AE8097900158617 /* Debug */,
+				9E41F6081AE8097900158617 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E41F5DE1AE8097900158617 /* Project object */;
+}
