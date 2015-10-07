@@ -1,0 +1,101 @@
+END USER LICENSE AGREEMENT ("EULA")
+
+
+READ THIS AGREEMENT CAREFULLY.
+BY CLICKING ON THE "I AGREE" BUTTON OR INSTALLING OR USING ALL OR ANY PORTION OF THE SOFTWARE, YOU ARE ACCEPTING ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. YOU AGREE THAT THIS AGREEMENT IS ENFORCEABLE LIKE ANY WRITTEN NEGOTIATED AGREEMENT SIGNED BY YOU.
+IF YOU DO NOT AGREE TO ALL OF THESE TERMS AND CONDITIONS, CLICK "I DON'T AGREE". YOU WILL NOT BE GIVEN ACCESS TO THE SOFTWARE UNLESS YOU ACCEPT THE TERMS OF THIS AGREEMENT. IF YOU HAVE PAID A LICENSE FEE FOR USE OF THE SOFTWARE AND DO NOT AGREE TO THESE TERMS, YOU MAY RETURN THE SOFTWARE FOR A FULL REFUND PROVIDED YOU (A) DO NOT USE THE SOFTWARE AND (B) RETURN THE SOFTWARE WITHIN THIRTY (30) DAYS OF YOUR INITIAL PURCHASE.
+IF YOU WISH TO USE THE SOFTWARE AS AN EMPLOYEE, CONTRACTOR, OR AGENT OF A CORPORATION, PARTNERSHIP OR SIMILAR ENTITY, THEN YOU MUST BE AUTHORIZED TO SIGN FOR AND BIND THE ENTITY IN ORDER TO ACCEPT THE TERMS OF THIS AGREEMENT. THE LICENSES GRANTED UNDER THIS AGREEMENT ARE EXPRESSLY CONDITIONED UPON ACCEPTANCE BY SUCH AUTHORIZED PERSONNEL.
+IF YOU HAVE ENTERED INTO A SEPARATE WRITTEN LICENSE AGREEMENT WITH EMOTIV FOR USE OF THE SOFTWARE, THE TERMS AND CONDITIONS OF SUCH OTHER AGREEMENT SHALL PREVAIL OVER ANY CONFLICTING TERMS OR CONDITIONS IN THIS AGREEMENT. 
+This End User License Agreement ("Agreement") is between Emotiv Inc., located at 490 Post St, Suite 824
+San Francisco, CA 94102 USA. ("Emotiv") and the customer (individual or entity) that has procured the licensed Software (as defined below) for use as an end user ("you"). This Agreement covers any Software and supporting technical documentation provided with the Software ("Documentation").
+
+1.	Definitions. 
+Effective Date: means the date on which the Software is first made available to you.
+Software: means the Emotiv software product(s) provided in connection with this Agreement in object code form. "Software" shall also include any releases provided to or purchased by you under any separate support and maintenance agreement you may enter into with Emotiv. Unless otherwise noted, the Software and Documentation are referred to collectively herein as "Software".
+
+2.	License.
+
+2.1	Grant of License. Subject to all of the terms and conditions of this Agreement, Emotiv grants you a non-transferable, non-sublicensable, non-exclusive license to use the Software, but only in accordance with 
+(i) the Documentation, 
+(ii) this Agreement and 
+(iii) any license term or other user, computer, field of use or other restrictions specified upon purchase.
+
+2.2	Installation and Copies. If you are an individual, you may copy and install the Software on a single computer. If you are a corporation, partnership, or other entity, you may copy and install on your computers for use only by your employees the number of copies of the Software for which you have paid the applicable license fee.  Unless you have executed a separate written agreement with Emotiv, you may only use one copy of the Software per Emotiv headset purchased by you. You may also make a reasonable number of copies of the Software for back-up and archival purposes.
+
+2.3.	License Restrictions. You shall not (and shall not allow any third party to): 
+(a) decompile, disassemble, or otherwise reverse engineer the Software or attempt to reconstruct or discover any source code, underlying ideas, algorithms, file formats or programming interfaces of the Software by any means whatsoever (except and only to the extent that applicable law prohibits or restricts reverse engineering restrictions); 
+(b) use the Software in connection with any non-Emotiv hardware; 
+(c) distribute, sell, sublicense, rent, lease or use the Software (or any portion thereof) for time sharing, hosting, service provider or like purposes; 
+(d) remove any product identification, proprietary, copyright or other notices contained in the Software; 
+(e) modify any part of the Software, create a derivative work of any part of the Software, or incorporate the Software into or with other software, except to the extent expressly authorized in writing by Emotiv; or 
+(f) publicly disseminate performance information or analysis (including, without limitation, benchmarks) from any source relating to the Software. 
+
+3.	Ownership. Notwithstanding anything to the contrary contained herein, except for the limited license rights expressly provided herein, Emotiv and its suppliers have and will retain all rights, title and interest (including, without limitation, all patent, copyright, trademark, trade secret and other intellectual property rights) in and to the Software and all copies, modifications and derivative works thereof. You acknowledge that you are obtaining only a limited license right to the Software and that irrespective of any use of the words "purchase", "sale" or like terms hereunder no ownership rights are being conveyed to you under this Agreement or otherwise.
+
+4.	Payment. You shall pay all necessary fees for the Emotiv products bundled with the Software. You shall be responsible for all taxes, withholdings, duties and levies arising from the order (excluding taxes based on the net income of Emotiv). 
+
+5.	Term of Agreement.	
+
+5.1	Term. This Agreement is effective as of the Effective Date and expires at such time as all licenses hereunder have expired in accordance with their own terms (the "Term"). Either party may terminate this Agreement if the other party: 
+(a) fails to cure any material breach of this Agreement within thirty (30) days after written notice of such breach; 
+(b) ceases operation without a successor; or 
+(c) seeks protection under any bankruptcy, receivership, trust deed, creditors arrangement, composition or comparable proceeding, or if any such proceeding is instituted against such party (and not dismissed within sixty (60) days)). Termination is not an exclusive remedy and the exercise by either party of any remedy under this Agreement will be without prejudice to any other remedies it may have under this Agreement, by law, or otherwise.
+
+5.2	Termination. Upon any expiration or termination of this Agreement, you shall cease any and all use of any Software and destroy all copies thereof and so certify to Emotiv in writing. 
+
+5.3	Survival. Sections 2.3 (License Restrictions), 3 (Ownership), 4 (Payment), 5 (Term of Agreement), 6.3 (Disclaimer of Warranties), 7 (Limitation of Remedies and Damages), 8 (Confidential Information), 9 (Export Compliance) and 10 (General) shall survive any termination or expiration of this Agreement.
+
+6.	Limited Warranty and Disclaimer.
+
+6.1	Limited Warranty. Emotiv warrants to you that for a period of ninety (90) days from the Effective Date (the "Warranty Period") the Software shall operate in substantial conformity with the Documentation. Emotiv does not warrant that your use of the Software will be uninterrupted or error-free or that any security mechanisms implemented by the Software will not have inherent limitations. Emotiv's sole liability (and your exclusive remedy) for any breach of this warranty shall be, in Emotiv's sole discretion, to use commercially reasonable efforts to provide you with an error-correction or work-around which corrects the reported non-conformity, or if Emotiv determines such remedies to be impracticable within a reasonable period of time, to refund the license fee paid for the Software. Emotiv shall have no obligation with respect to a warranty claim unless notified of such claim within the Warranty Period. To the extent that Emotiv provides any warranty for hardware accompanying the Software, such hardware warranty shall not affect the warranty in this Section 6.1.
+
+6.2	 Exclusions. The above warranty shall not apply: 
+(i) if the Software is used with hardware or software not specified in the Documentation; 
+(ii) if any modifications are made to the Software by you or any third party; 
+(iii) to defects in the Software due to accident, abuse or improper use by you; or 
+(iv) to Software provided on a no charge or evaluation basis.
+
+6.3	Disclaimer of Warranties. THIS SECTION 6 IS A LIMITED WARRANTY AND, EXCEPT AS EXPRESSLY SET FORTH IN THIS SECTION 6, THE SOFTWARE AND ALL SERVICES ARE PROVIDED "AS IS". NEITHER EMOTIV NOR ITS SUPPLIERS MAKES ANY OTHER WARRANTIES, CONDITIONS OR UNDERTAKINGS, EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NONINFRINGEMENT. YOU MAY HAVE OTHER STATUTORY RIGHTS. HOWEVER, TO THE FULL EXTENT PERMITTED BY LAW, THE DURATION OF STATUTORILY REQUIRED WARRANTIES, IF ANY, SHALL BE LIMITED TO THE LIMITED WARRANTY PERIOD.
+
+7.	Limitation of Remedies and Damages.
+
+7.1	NEITHER YOU NOR EMOTIV (INCLUDING EMOTIV'S SUPPLIERS) SHALL BE LIABLE FOR ANY LOSS OF USE, LOST DATA, FAILURE OF SECURITY MECHANISMS, INTERRUPTION OF BUSINESS, OR ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING LOST PROFITS), REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY OR OTHERWISE, EVEN IF INFORMED OF THE POSSIBILITY OF SUCH DAMAGES IN ADVANCE. THIS SECTION 7.1 SHALL NOT APPLY TO YOU WITH RESPECT TO ANY CLAIM ARISING UNDER THE SECTIONS TITLED "GRANT OF LICENSE," "LICENSE RESTRICTIONS" OR "CONFIDENTIAL INFORMATION". 
+
+7.2 NOTWITHSTANDING ANY OTHER PROVISION OF THIS AGREEMENT, EMOTIV AND ITS SUPPLIERS' ENTIRE LIABILITY TO YOU UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT ACTUALLY PAID BY YOU TO EMOTIV UNDER THIS AGREEMENT.
+
+7.3	The parties agree that the limitations specified in this Section 7 will survive and apply even if any limited remedy specified in this Agreement is found to have failed of its essential purpose.
+
+8.	Confidential Information. Any software, documentation or technical information provided by Emotiv (or its agents) shall be deemed "Emotiv Confidential Information" without any marking or further designation. Except as expressly authorized herein, you will hold in confidence and not use or disclose any Emotiv Confidential Information. You acknowledge that disclosure of Emotiv Confidential Information would cause substantial harm to Emotiv that could not be remedied by the payment of damages alone and therefore that upon any such disclosure by you, Emotiv shall be entitled to appropriate equitable relief in addition to whatever remedies it might have at law.
+
+9.	Export Compliance. You acknowledge that the Software is subject to export restrictions by the United States government and import restrictions by certain foreign governments. You shall not, and shall not allow any third-party to, remove or export from the United States or allow the export or re-export of any part of the Software or any direct product thereof: 
+(i) into (or to a national or resident of) any embargoed or terrorist-supporting country; 
+(ii) to anyone on the U.S. Commerce Department's Table of Denial Orders or U.S. Treasury Department's list of Specially Designated Nationals; 
+(iii) to any country to which such export or re-export is restricted or prohibited, or as to which the United States government or any agency thereof requires an export license or other governmental approval at the time of export or re-export without first obtaining such license or approval; or 
+(iv) otherwise in violation of any export or import restrictions, laws or regulations of any United States or foreign agency or authority. You agree to the foregoing and warrant that you are not located in, under the control of, or a national or resident of any such prohibited country or on any such prohibited party list. The Software is further restricted from being used for the design or development of nuclear, chemical, or biological weapons or missile technology, or for terrorist activity, without the prior permission of the United States government.
+
+10. 	General.
+
+10.1	Assignment. This Agreement will bind and inure to the benefit of each party's permitted successors and assigns. Emotiv may assign this Agreement to any affiliate or in connection with a merger, reorganization, acquisition or other transfer of all or substantially all of Emotiv's assets or voting securities. You may not assign or transfer this Agreement, in whole or in part, without Emotiv's written consent. Any attempt to transfer or assign this Agreement without such written consent will be null and void.
+
+10.2	Severability. If any provision of this Agreement shall be adjudged by any court of competent jurisdiction to be unenforceable or invalid, that provision shall be limited to the minimum extent necessary so that this Agreement shall otherwise remain in effect.
+
+10.3	Governing Law; Jurisdiction and Venue. This Agreement shall be governed by the laws of The State of California and the United States without regard to conflicts of laws provisions thereof, and without regard to the United Nations Convention on the International Sale of Goods.  The jurisdiction and venue for actions related to the subject matter hereof shall be the California state and United States federal courts located in San Francisco, California, and both parties hereby submit to the personal jurisdiction of such courts. 
+
+10.4	Attorneys' Fees and Costs. The prevailing party in any action to enforce this Agreement will be entitled to recover its attorneys' fees and costs in connection with such action.
+
+10.5	Notices and Reports. Any notice or report hereunder shall be in writing. If to Emotiv, such notice or report shall be sent to Emotiv at the address above to the attention of "Legal Department". If to you, such notice or report shall be sent to the address you provided upon placing your order. Notices and reports shall be deemed given: (i) upon receipt if by personal delivery; (ii) upon receipt if sent by certified or registered U.S. mail (return receipt requested); or (iii) one day after it is sent if by next day delivery by a major commercial delivery service.
+
+10.6	Amendments; Waivers. No supplement, modification, or amendment of this Agreement shall be binding, unless executed in writing by a duly authorized representative of each party to this Agreement. No waiver will be implied from conduct or failure to enforce or exercise rights under this Agreement, nor will any waiver be effective unless in a writing signed by a duly authorized representative on behalf of the party claimed to have waived.
+
+10.7	Entire Agreement. This Agreement is the complete and exclusive statement of the mutual understanding of the parties and supersedes and cancels all previous written and oral agreements and communications relating to the subject matter of this Agreement. No provision of any purchase order or in any other business form employed by you will supersede the terms and conditions of this Agreement, and any such document issued by a party hereto relating to this Agreement shall be for administrative purposes only and shall have no legal effect. Notwithstanding the foregoing, if you have entered into a separate written license agreement signed by Emotiv for use of the Software, the terms and conditions of such other agreement shall prevail over any conflicting terms or conditions in this Agreement.
+
+10.8	Independent Contractors. The parties to this Agreement are independent contractors. There is no relationship of partnership, joint venture, employment, franchise or agency created hereby between the parties. Neither party will have the power to bind the other or incur obligations on the other party's behalf without the other party's prior written consent.
+
+10.9	Force Majeure. Neither party shall be liable to the other for any delay or failure to perform any obligation under this Agreement (except for a failure to pay fees) if the delay or failure is due to unforeseen events, which occur after the signing of this Agreement and which are beyond the reasonable control of the parties, such as strikes, blockade, war, terrorism, riots, natural disasters, refusal of license by the government or other governmental agencies, in so far as such an event prevents or delays the affected party from fulfilling its obligations and such party is not able to prevent or remove the force majeure at reasonable cost.
+
+10.10	Government End-Users. The Software is commercial computer software.  If the user or licensee of the Software is an agency, department, or other entity of the United States Government, the use, duplication, reproduction, release, modification, disclosure, or transfer of the Software, or any related documentation of any kind, including technical data and manuals, is restricted by a license agreement or by the terms of this Agreement in accordance with Federal Acquisition Regulation 12.212 for civilian purposes and Defense Federal Acquisition Regulation Supplement 227.7202 for military purposes. The Software was developed fully at private expense. All other use is prohibited.
+
+10.11	Third-Party Code. If designated in the Documentation, the Software may contain or be provided with certain third-party code (including code which may be made available to you in source code form). Ownership, use, warranty and modification rights with respect to any such designated code shall be as expressly set forth in the Documentation. 
+
+
+
