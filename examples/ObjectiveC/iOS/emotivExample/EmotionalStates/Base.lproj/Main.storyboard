@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9mA-yJ-Bvz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emotional States Project" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw1-Ug-1f4">
+                                        <rect key="frame" x="168" y="41" width="264" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="264" id="9Pi-cc-3h5"/>
+                                            <constraint firstAttribute="height" constant="21" id="NYq-r0-skS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="Dw1-Ug-1f4" secondAttribute="centerX" id="B37-rG-Fom"/>
+                                    <constraint firstAttribute="height" constant="70" id="XaR-7I-3aK"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dw1-Ug-1f4" secondAttribute="bottom" constant="8" id="YpE-Jj-bQm"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeW-i1-ces">
+                                <rect key="frame" x="0.0" y="530" width="600" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0P-Cd-d3a">
+                                        <rect key="frame" x="200" y="15" width="200" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="mKg-Nv-OhE"/>
+                                            <constraint firstAttribute="width" constant="200" id="nY3-hu-fDl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="recordData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3f-Ok-yhV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f0P-Cd-d3a" firstAttribute="top" secondItem="IeW-i1-ces" secondAttribute="top" constant="20" id="1Ri-AY-SGR"/>
+                                    <constraint firstAttribute="centerY" secondItem="f0P-Cd-d3a" secondAttribute="centerY" id="Cqv-OZ-y6m"/>
+                                    <constraint firstAttribute="centerX" secondItem="f0P-Cd-d3a" secondAttribute="centerX" id="qca-Pf-Kcv"/>
+                                    <constraint firstAttribute="bottom" secondItem="f0P-Cd-d3a" secondAttribute="bottom" constant="20" id="vEX-EO-08I"/>
+                                    <constraint firstAttribute="height" constant="70" id="xGi-11-A92"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Ri-AY-SGR"/>
+                                        <exclude reference="vEX-EO-08I"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xic-ii-gRi">
+                                <rect key="frame" x="0.0" y="70" width="600" height="460"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="36J-m5-LpC"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IeW-i1-ces" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5EK-4m-TKJ"/>
+                            <constraint firstItem="9mA-yJ-Bvz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Qz-zc-Pzx"/>
+                            <constraint firstItem="9mA-yJ-Bvz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="B42-cX-xEJ"/>
+                            <constraint firstItem="Xic-ii-gRi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FP0-nL-VG7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IeW-i1-ces" secondAttribute="bottom" id="JYi-mu-eJO"/>
+                            <constraint firstItem="IeW-i1-ces" firstAttribute="top" secondItem="Xic-ii-gRi" secondAttribute="bottom" id="QX5-YV-98o"/>
+                            <constraint firstItem="Xic-ii-gRi" firstAttribute="top" secondItem="9mA-yJ-Bvz" secondAttribute="bottom" id="csP-kQ-1IH"/>
+                            <constraint firstAttribute="trailing" secondItem="9mA-yJ-Bvz" secondAttribute="trailing" id="edj-nU-k0P"/>
+                            <constraint firstAttribute="trailing" secondItem="Xic-ii-gRi" secondAttribute="trailing" id="k8s-FC-J8Y"/>
+                            <constraint firstAttribute="trailing" secondItem="IeW-i1-ces" secondAttribute="trailing" id="nWx-TA-9yz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btRecord" destination="f0P-Cd-d3a" id="epP-PP-hee"/>
+                        <outlet property="scrollView" destination="Xic-ii-gRi" id="RbJ-pT-Pey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
