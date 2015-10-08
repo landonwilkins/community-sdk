@@ -49,8 +49,6 @@ extern "C"
 
     } IEE_EmotivSuite_t;
 
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_START
-
     //! FacialExpression facial expression type enumerator
     typedef enum IEE_FacialExpressionAlgo_enum {
 
@@ -85,8 +83,6 @@ extern "C"
         MC_DISAPPEAR                = 0x2000
 
     } IEE_MentalCommandAction_t;
-
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_END
     
     //! Wireless Signal Strength enumerator
     typedef enum IEE_SignalStrength_enum {
@@ -277,7 +273,6 @@ extern "C"
 		                         int* chargeLevel,
 		                         int* maxChargeLevel);
 
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_START
 
     //! Query whether the user is blinking at the time the EmoState is captured.
     /*!
@@ -550,8 +545,6 @@ extern "C"
     EMOSTATE_DLL_API int
         IS_MentalCommandEqual(EmoStateHandle a,
                               EmoStateHandle b);
-
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_END
 
 
 	//! Clone EmoStateHandle

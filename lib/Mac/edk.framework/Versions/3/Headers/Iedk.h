@@ -544,9 +544,6 @@ extern "C"
 		unsigned int* samplingRateOut);
 
 
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_START
-
-
     //! Enable/disable particular detections
     /*!
         By default, all detections are enabled.
@@ -569,8 +566,6 @@ extern "C"
      */
     EDK_API void
         IEE_CheckDetectionsEnabled(unsigned long* result);
-    
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_END
     
     
     //!

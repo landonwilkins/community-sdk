@@ -205,16 +205,6 @@ extern "C"
     EDK_API EmoEngineEventHandle
         IEE_EmoEngineEventCreate();
 
-
-    //! Return a handle to memory that can hold a profile byte stream.
-    /*!
-        This handle can be reused by the caller to retrieve subsequent profile bytes.
-     
-        \return EmoEngineEventHandle
-    */
-    EDK_API EmoEngineEventHandle
-        IEE_ProfileEventCreate();
-
     
     //! Free memory referenced by an event handle.
     /*!

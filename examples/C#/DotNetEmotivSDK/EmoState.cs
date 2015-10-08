@@ -168,7 +168,6 @@ namespace Emotiv
             return EdkDll.IS_Equal(a.GetHandle(), b.GetHandle());
         }
 
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_START
         /// <summary>
         /// Query whether the user is blinking at the time the EmoState is captured.
         /// </summary>
@@ -381,6 +380,5 @@ namespace Emotiv
         {
             return EdkDll.IS_MentalCommandEqual(GetHandle(), state.GetHandle());
         }
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_END
     }
 }

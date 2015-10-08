@@ -495,8 +495,6 @@ public interface Edk extends Library {
 	int IEE_FacialExpressionGetSignatureType(int userId,
 			IntByReference pSigTypeOut);
 
-	// DEPLOYMENT::STABLE_RELEASE::REMOVE_START
-
 	// @@ These APIs have been obsoleted
 	// @@ Use IEE_MentalCommandSetActiveActions and
 	// IEE_MentalCommandGetActiveActions instead
@@ -830,86 +828,6 @@ public interface Edk extends Library {
 	 * \sa EmoStateDll.h \sa edkErrorCode.h
 	 */
 	int IEE_HeadsetGyroRezero(int userId);
-
-	// ! Returns a handle to memory that can hold an optimization paramaeter
-	// which is used to configure the behaviour of optimization
-	/*
-	 * ! \return Pointer
-	 */
-	Pointer IEE_OptimizationParamCreate();
-
-	// ! Frees memory referenced by an optimization parameter handle
-	/*
-	 * ! \param hParam - a handle returned by IEE_OptimizationParamCreate()
-	 */
-	void IEE_OptimizationParamFree(Pointer hParam);
-
-	// ! Enable optimization. EmoEngine will try to optimize its performance
-	// according to the information passed in with optimization parameter.
-	// EmoEngine guarantees the correctness of the results of vital algorithms.
-	// For algorithms that are not vital, results are undefined.
-	/*
-	 * ! \param hParam - a handle returned by IEE_OptimizationParamCreate()
-	 * \return EDK_ERROR_CODE - EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_OptimizationEnable(Pointer hParam);
-
-	// ! Determine whether optimization is on
-	/*
-	 * ! \param pEnabledOut - receives information about whether optimization is
-	 * on \return EDK_ERROR_CODE - EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_OptimizationIsEnabled(IntByReference pEnabledOut);
-
-	// ! Disable optimization
-	/*
-	 * ! \return EDK_ERROR_CODE - EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_OptimizationDisable();
-
-	// ! Get optimization parameter. If optimization is not enabled (this can be
-	// checked with IEE_OptimmizationIsEnabled) then the results attached to the
-	// hParam parameter are undefined.
-	/*
-	 * ! \param hParam - a handle returned by IEE_OptimizationParamCreate()
-	 * \return EDK_ERROR_CODE - EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_OptimizationGetParam(Pointer hParam);
-
-	// ! Get a list of vital algorithms of specific suite from optimization
-	// parameter
-	/*
-	 * ! \param hParam - a handle returned by IEE_OptimizationParamCreate()
-	 * \param suite - suite that you are interested in \param
-	 * pVitalAlgorithmBitVectorOut - receives a list of vital algorithm composed
-	 * of int, int or int depending on the suite parameter \return
-	 * EDK_ERROR_CODE - EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_OptimizationGetVitalAlgorithm(Pointer hParam, int suite,
-			IntByReference pVitalAlgorithmBitVectorOut);
-
-	// ! Set a list of vital algorithms of specific suite to optimization
-	// parameter
-	/*
-	 * ! \param hParam - a handle returned by IEE_OptimizationParamCreate()
-	 * \param suite - suite that you are interested in \param
-	 * vitalAlgorithmBitVector - a list of vital algorithm composed of int, int
-	 * or int depended on the suite parameter passed in \return EDK_ERROR_CODE -
-	 * EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_OptimizationSetVitalAlgorithm(Pointer hParam, int suite,
-			int vitalAlgorithmBitVector);
-
-	// ! Resets all settings and user-specific profile data for the specified
-	// detection suite
-	/*
-	 * ! \param userId - user ID \param suite - detection suite
-	 * (FacialExpression, PerformanceMetric, or MentalCommand) \param
-	 * detectionBitVector - identifies specific detections. Set to zero for all
-	 * detections. \return EDK_ERROR_CODE - EDK_ERROR_CODEEDK_OK if successful
-	 */
-	int IEE_ResetDetection(int userId, int suite, int detectionBitVector);
-
 	
 	 //! Return a handle to memory that can hold motion data.
     //  This handle can be reused by the caller to retrieve subsequent data.
