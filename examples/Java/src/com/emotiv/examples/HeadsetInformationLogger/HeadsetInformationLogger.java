@@ -10,8 +10,6 @@
 package com.emotiv.examples.HeadsetInformationLogger;
 
 import com.emotiv.Iedk.*;
-import com.emotiv.Iedk.Edk.IEE_DataChannels_t;
-import com.emotiv.Iedk.Edk.IEE_Event_t;
 import com.emotiv.Iedk.EmoState.IEE_InputChannels_t;
 import com.sun.jna.Pointer;
 import com.sun.jna.ptr.*;
@@ -79,15 +77,15 @@ public class HeadsetInformationLogger {
 					System.out.print(batteryLevel.getValue() + ", ");
 					
 					System.out.print(EmoState.INSTANCE.IS_GetContactQuality(eState, 
-										IEE_DataChannels_t.IED_AF3.getType()) + ", ");
+										IEE_InputChannels_t.IEE_CHAN_AF3.getType()) + ", ");
 					System.out.print(EmoState.INSTANCE.IS_GetContactQuality(eState, 
-										IEE_DataChannels_t.IED_T7.getType()) + ", ");
+										IEE_InputChannels_t.IEE_CHAN_T7.getType()) + ", ");
 					System.out.print(EmoState.INSTANCE.IS_GetContactQuality(eState, 
-										IEE_DataChannels_t.IED_Pz.getType()) + ", ");
+										IEE_InputChannels_t.IEE_CHAN_Pz.getType()) + ", ");
 					System.out.print(EmoState.INSTANCE.IS_GetContactQuality(eState, 
-										IEE_DataChannels_t.IED_T8.getType()) + ", ");
+										IEE_InputChannels_t.IEE_CHAN_T8.getType()) + ", ");
 					System.out.println(EmoState.INSTANCE.IS_GetContactQuality(eState, 
-										IEE_DataChannels_t.IED_AF4.getType()) + ", ");
+										IEE_InputChannels_t.IEE_CHAN_AF4.getType()) + ", ");
 				}
 			} else if (state != EdkErrorCode.EDK_NO_EVENT.ToInt()) {
 				System.out.println("Internal error in Emotiv Engine!");
