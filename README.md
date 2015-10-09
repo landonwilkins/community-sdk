@@ -33,7 +33,7 @@ Coming soon:
 
 * Insight with Emotiv Universal USB Receiver currently works with the SDK under:
   * Windows 7 or above
-  * Mac OS X 10.8.5
+  * Mac OS X 10.8.5 or above
   * Android 4.4.3 or above
 
 ## Connecting Your Insight
