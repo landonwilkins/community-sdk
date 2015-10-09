@@ -41,6 +41,15 @@ extern "C"
 {
 #endif
 
+#ifdef __APPLE__
+    //! Mode of Headset
+    typedef enum EE_ModeHeadset_enum {
+        MODE_EPOC = 0 ,
+        MODE_EPOCPLUS_NOMOTION,
+        MODE_EPOCPLUS_MOTION
+    } EE_ModeHeadset_t;
+#endif
+    
     //! Handle to EmoState structure allocated by IEE_EmoStateCreate.
     /*!
         \sa IEE_EmoStateCreate()
@@ -538,10 +547,6 @@ extern "C"
 		IEE_MotionDataGetSamplingRate(unsigned int userId,
 		unsigned int* samplingRateOut);
 
-
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_START
-
-
     //! Enable/disable particular detections
     /*!
         By default, all detections are enabled.
@@ -565,9 +570,6 @@ extern "C"
     EDK_API void
         IEE_CheckDetectionsEnabled(unsigned long* result);
     
-//DEPLOYMENT::NON_PREMIUM_RELEASE::REMOVE_END
-    
-    
     //!
     //! The following API calls are only applicable for certain platforms to establish BTLE connection with the headset.
     //!
@@ -589,7 +591,7 @@ extern "C"
     
 #if defined(__APPLE__) || defined(__ANDROID__)
     
-    //! Connect to a particular headset
+    //! Connect to a particular Insight headset
     /*!
         \remark Available on Mac/iOS/Android only.
      
@@ -622,7 +624,7 @@ extern "C"
         IEE_GetNumberDeviceInsight();
     
     
-    //! Return name of headset in listed devices
+    //! Return name of Insight headset in listed devices
     /*!
         \remark Available on Mac/iOS/Android only.
      
@@ -631,6 +633,54 @@ extern "C"
     */
     EDK_API const char*
         IEE_GetNameDeviceInsightAtIndex(int index);
+    
+    //! Connect to a particular EPOC+ headset
+    /*!
+     \remark Available on Mac/iOS/Android only.
+     
+     \param indexDevice - the index of device in list (start with 0)
+     \return true if connected successfully
+     */
+    EDK_API int
+        EE_EmoConnectDevice(int indexDevice,bool isSettingMode = false);
+    
+    //! Check the signal strength of current connected device
+    /*!
+     \remark Available on Mac/iOS/Android only.
+     \param indexDevice - the index of device in list (start with 0)
+     If there are multiple headsets around, you should choose to connect to the one with strongest signal.
+     
+     \param value - -30 to 0 (weak to strong)
+     */
+    EDK_API void
+        EE_GetSignalStrengthBLEEPOCPLUS(int& value, int indexDevice);
+    
+    //! Get number of EPOC+ headset in the list
+    /*!
+     \remark Available on Mac/iOS/Android only.
+     
+     \return number of Insight headsets
+     */
+    EDK_API int
+        EE_GetNumberDeviceEpocPlus();
+    
+    //! Return name of EPOC+ headset in listed devices
+    /*!
+     \remark Available on Mac/iOS/Android only.
+     
+     \param index - index in list device
+     \return const char* - name of the headset
+     */
+    EDK_API const char*
+        EE_GetNameDeviceEpocAtIndex(int index);
+    
+    //! Switch mode of EPOC+ Headset
+    /*!
+     \param value - Mode of EPOC+ Headset
+     \return true if setting succes
+     */
+    EDK_API int
+        EE_EmoSettingMode(EE_ModeHeadset_t value);
     
 #endif
     

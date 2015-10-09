@@ -2,7 +2,7 @@
  * Emotiv Insight SDK
  * Copyright (c) 2015 Emotiv Inc.
  *
- * This file is part of the Emotiv Insight SDK.
+ * This file is part of the Emotiv SDK.
  *
  * The main interface that allows interactions between external programs and the Emotiv detection engine.
  *
@@ -19,6 +19,7 @@
 #include "IEmoStateDLL.h"
 #include "FacialExpressionDetection.h"
 #include "MentalCommandDetection.h"
+
 
 
 #ifndef EDK_STATIC_LIB
@@ -99,16 +100,16 @@ extern "C"
 
 	//! Detection type enumerator
 	typedef enum IEE_Detection_enum {
-		DT_BlinkAndWink     = 0x0001,
-		DT_FacialExpression = 0x0002,
-		DT_EyeMovement      = 0x0004,
-		DT_Excitement       = 0x0008,
-		DT_Engagement       = 0x0010,
-		DT_Relaxation       = 0x0020,
-		DT_Interest         = 0x0040,
-		DT_Stress           = 0x0080,
-		DT_Focus            = 0x0100,
-		DT_MentalCommand    = 0x0200,
+		DT_BlinkAndWink     = 0x0001,   //!< Blink and Wink detection
+		DT_FacialExpression = 0x0002,   //!< Other facial expression detection
+		DT_EyeMovement      = 0x0004,   //!< Eye movement detection
+		DT_Excitement       = 0x0008,   //!< Excitement detection (deprecated)
+		DT_Engagement       = 0x0010,   //!< Engagement detection (deprecated)
+		DT_Relaxation       = 0x0020,   //!< Relaxation detection (deprecated)
+		DT_Interest         = 0x0040,   //!< Interest detection (deprecated)
+		DT_Stress           = 0x0080,   //!< Stress detection (deprecated)
+		DT_Focus            = 0x0100,   //!< Focus detection (deprecated)
+		DT_MentalCommand    = 0x0200,   //!< Mental command detection
 		DT_AllDetections    = (DT_BlinkAndWink | DT_FacialExpression | DT_EyeMovement |
 		                       DT_Excitement | DT_Engagement | DT_Relaxation |
 		                       DT_Interest | DT_Stress | DT_Focus |
@@ -205,16 +206,6 @@ extern "C"
     EDK_API EmoEngineEventHandle
         IEE_EmoEngineEventCreate();
 
-
-    //! Return a handle to memory that can hold a profile byte stream.
-    /*!
-        This handle can be reused by the caller to retrieve subsequent profile bytes.
-     
-        \return EmoEngineEventHandle
-    */
-    EDK_API EmoEngineEventHandle
-        IEE_ProfileEventCreate();
-
     
     //! Free memory referenced by an event handle.
     /*!
@@ -264,7 +255,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_EmoEngineEventGetUserId(EmoEngineEventHandle hEvent,
-		unsigned int *pUserIdOut);
+                                    unsigned int *pUserIdOut);
 
 
 	//! Copy an EmoState returned with a IEE_EmoStateUpdate event to memory referenced by an EmoStateHandle.
@@ -279,7 +270,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_EmoEngineEventGetEmoState(EmoEngineEventHandle hEvent,
-		EmoStateHandle hEmoState);
+                                      EmoStateHandle hEmoState);
 
 
 	//! Retrieve the next EmoEngine event
@@ -340,7 +331,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_SetHardwarePlayerDisplay(unsigned int userId,
-		unsigned int playerNum);
+                                     unsigned int playerNum);
 
 
 	//! Return a struct containing details about a specific channel
@@ -355,7 +346,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_HeadsetGetSensorDetails(IEE_InputChannels_t channelId,
-		IInputSensorDescriptor_t* pDescriptorOut);
+                                    IInputSensorDescriptor_t* pDescriptorOut);
 
 
 	//! Return the current hardware version of the headset and dongle (if available).
@@ -379,7 +370,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_HardwareGetVersion(unsigned int userId,
-		unsigned long* pHwVersionOut);
+                               unsigned long* pHwVersionOut);
 
 
 	//! Return the current version of the Emotiv SDK
@@ -395,8 +386,8 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_SoftwareGetVersion(char* pszVersionOut,
-		unsigned int nVersionChars,
-		unsigned long* pBuildNumOut);
+                               unsigned int nVersionChars,
+                               unsigned long* pBuildNumOut);
 
 
 	//! Return the delta of the movement of the gyro since the previous call for a particular user
@@ -412,8 +403,8 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_HeadsetGetGyroDelta(unsigned int userId,
-		int* pXOut,
-		int* pYOut);
+                                int* pXOut,
+                                int* pYOut);
 
 
 	//! Re-zero the gyro for a particular user
@@ -456,7 +447,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_MotionDataUpdateHandle(unsigned int userId,
-		DataHandle hData);
+                                   DataHandle hData);
 
 
 	//! Extract data of a particular channel from the data handle
@@ -471,9 +462,9 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_MotionDataGet(DataHandle hData,
-		IEE_MotionDataChannel_t channel,
-		double buffer[],
-		unsigned int bufferSizeInSample);
+                          IEE_MotionDataChannel_t channel,
+                          double buffer[],
+                          unsigned int bufferSizeInSample);
 
 
 	//! Extract data of a list of channels from the data handle
@@ -489,10 +480,10 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_MotionDataGetMultiChannels(DataHandle hData,
-		IEE_MotionDataChannel_t channels[],
-		unsigned int nChannels,
-		double* buffer[],
-		unsigned int bufferSizeInSample);
+                                       IEE_MotionDataChannel_t channels[],
+                                       unsigned int nChannels,
+                                       double* buffer[],
+                                       unsigned int bufferSizeInSample);
 
 
 	//! Return number of sample of motion data stored in the data handle
@@ -505,7 +496,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_MotionDataGetNumberOfSample(DataHandle hData,
-		unsigned int* nSampleOut);
+                                        unsigned int* nSampleOut);
 
 
 	//! Set the size of the motion data buffer.
@@ -530,6 +521,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_MotionDataGetBufferSizeInSec(float* pBufferSizeInSecOut);
+    
 
 	//! Get sampling rate of the motion data stream
 	/*!
@@ -541,7 +533,7 @@ extern "C"
 	*/
 	EDK_API int
 		IEE_MotionDataGetSamplingRate(unsigned int userId,
-		unsigned int* samplingRateOut);
+                                      unsigned int* samplingRateOut);
 
 
     //! Enable/disable particular detections
@@ -631,7 +623,30 @@ extern "C"
     */
     EDK_API const char*
         IEE_GetNameDeviceInsightAtIndex(int index);
-    
+    //! Connect Device with ID
+    /*!
+     \param indexDevice  -  the order of device in list (start with 0)
+     \param isSettingMode - if true disable feature get data until setting succes
+     \return true if connect successfully
+     */
+    EDK_API int EE_EmoConnectDevice(int indexDevice,bool isSettingMode= false);
+    //! Get Signal Strength of Device
+     /*!
+      \param int value
+      \param indexDevice - the index of device in list (start with 0)
+      */
+    EDK_API void EE_GetSignalStrengthBLEEPOCPLUS(int& value, int indexDevice);
+    //! Get Number of Device Epoc Plus Headset
+    /*!
+     \return int
+     */
+    EDK_API int EE_GetNumberDeviceEpocPlus();
+    //! Get Name of  Headset in list device
+    /*!
+     \param int index in list device
+     \return const char* name of device
+     */
+    EDK_API const char* EE_GetNameDeviceEpocAtIndex(int index);
 #endif
     
 #ifdef __cplusplus

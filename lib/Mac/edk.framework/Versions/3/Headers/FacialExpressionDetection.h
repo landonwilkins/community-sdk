@@ -4,6 +4,8 @@
 *
 * This file is part of the Emotiv SDK.
 *
+* Header file for Facial Expression related API.
+*
 */
 
 
