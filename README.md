@@ -46,7 +46,7 @@ The API reference can be found here:
 http://emotiv.com/api/insight/3.2.0/
 
 ## Known Issues
-* Mac SDK may not work with EPOC+ on USB dongle properly
+* Mac SDK may not work with EPOC+ in 256Hz mode over BTLE and USB dongle properly
 
 ## Apps and Tools
 
@@ -62,12 +62,14 @@ Compatible with Insight / EPOC / EPOC+ via BTLE or [Emotiv USB Universal Receive
 Please follow the instructions to install the Emotiv browser plugin before using the Control Panel.
 
 #### Insight App for Android
-https://play.google.com/store/apps/details?id=com.emotiv.insightapp
 Requires Android 4.4 or later
 
+https://play.google.com/store/apps/details?id=com.emotiv.insightapp
+
 #### Insight App for iOS
+Requires iOS 8.0 or later, **except iOS 8.3/8.4 due to BTLE data transmission limitation in those versions**
+
 https://itunes.apple.com/us/app/emotiv-insight/id1031805596
-Requires iOS 8.0 or later, except iOS 8.3/8.4 due to BTLE data transmission limitation in those versions.
 
 ## Support
 
