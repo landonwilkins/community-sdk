@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/createuser"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AAAAAA" >
+
+    <RelativeLayout
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#4d4d4d" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="Arial"
+            android:text="Facial Expressions Project"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/viewTop"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About this Project"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:text="This sample project demostrates how to detect and train 4 mental commands to manipulate a 2D block on the device screen. Commenting shows how to detect and train 9 additional commands. The project also demonstrates Neutral training, and saving/deleting training data for a given command."
+            android:textColor="#000000"
+            android:layout_marginLeft="5dp"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start By Creating A User:"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/editText1"
+                    android:layout_width="0dip"
+                    android:layout_height="50dp"
+                    android:layout_weight="70"
+                    android:singleLine="true"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="0dip"
+                    android:layout_height="50dp"
+                    android:layout_weight="30"
+                    android:onClick="clickedCreate"
+                    android:text="Create" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MentalCommand</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_create_user">MentalCommand</string>
+    <string name="title_activity_activity_trainning">ActivityTrainning</string>
+
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/viewTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#4d4d4d" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="Arial"
+            android:text="Facial Expressions"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/viewTop"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp" >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" />
+
+            <com.emotiv.customspinner.CustomSpinner
+                android:id="@+id/spinner2"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true" >
+            </com.emotiv.customspinner.CustomSpinner>
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true" />
+
+            <Button
+                android:id="@+id/btClear"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:text="Clear"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imgBox"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bgbox" />
+
+            <ProgressBar
+                android:id="@+id/ProgressBarpower"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="18dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/progressTimer"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="50dp"
+                android:background="#22000000"
+                android:progressDrawable="@drawable/verticalprogressbar" />
+
+            <ProgressBar
+                android:id="@+id/progressTimer"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:background="#22000000"
+                android:progress="80"
+                android:progressDrawable="@drawable/horizentalbar" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:background="#2b2b2b" >
+
+        <Button
+            android:id="@+id/btStartTrainning"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/trainbtshap"
+            android:clickable="true"
+            android:text="Train"
+            android:textColor="#ffffff"
+            android:textSize="20dip" />
+    </RelativeLayout>
+
+</RelativeLayout>
