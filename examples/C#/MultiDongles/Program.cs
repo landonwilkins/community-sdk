@@ -34,15 +34,13 @@ namespace MultiDongles
             if (e.userId == 0)
             {
                 EmoState es = e.emoState;
-                Double rawScoreEc = 0, minScaleEc = 0, maxScaleEc = 0;
-                es.PerformanceMetricGetInstantaneousExcitementModelParams(out rawScoreEc, out minScaleEc, out maxScaleEc);
-                Console.WriteLine("{0} ; excitement: {1} " ,e.userId, es.PerformanceMetricGetEngagementBoredomScore());
-                Console.WriteLine("{0} ; rawScore {1} minScale {2} maxScale", rawScoreEc, minScaleEc, maxScaleEc);
+
+                Console.WriteLine("User " ,e.userId, ":  ", es.GetTimeFromStart());                
             }
             else if( e.userId == 1)
             {
                 EmoState es = e.emoState;
-                Console.WriteLine("{0} ; excitement: {1} ", e.userId, es.PerformanceMetricGetEngagementBoredomScore());
+                Console.WriteLine("User ", e.userId, ":  ", es.GetTimeFromStart());                
             }
         }
     }

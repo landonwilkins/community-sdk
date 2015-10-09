@@ -46,22 +46,8 @@ int main(int argc,char** argv[])
 
 				if(eventType == IEE_EmoStateUpdated  )
 				{								
-                    // Copies an EmoState returned with a IEE_EmoStateUpdate event
-                    // to memory referenced by an EmoStateHandle.
-					if(IEE_EmoEngineEventGetEmoState(hEvent,eState)==EDK_OK)
-					{
-						if(IEE_GetUserProfile(userID,hEvent)==EDK_OK)
-						{
-							//PerformanceMetrice score, short term excitement						
-							cout <<"userID: " << userID  <<endl;
-                            cout <<"    Performance Metrics excitement score: "
-                                 << IS_PerformanceMetricGetInstantaneousExcitementScore(eState)
-                                 << endl;
-                            cout <<"    Facial Expression smile extent : "
-                                 << IS_FacialExpressionGetSmileExtent(eState)
-                                 <<endl;
-						}						
-					}										
+					IEE_EmoEngineEventGetEmoState(hEvent, eState);
+					cout<< "User " << userID << ": " << IS_GetTimeFromStart(eState);										
 				}
 				// userremoved event
 				else if( eventType == IEE_UserRemoved )

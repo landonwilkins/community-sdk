@@ -123,7 +123,7 @@ int main(int argc, char** argv) {
                     for (int sampleIdx=0 ; sampleIdx<(int)nSamplesTaken ;
                          ++ sampleIdx) {
                         for (int i = 0 ;
-                             i<sizeof(targetChannelList)/sizeof(IEE_DataChannel_t) ;
+                             i<sizeof(targetChannelList)/sizeof(IEE_MotionDataChannel_t) ;
                              i++) {
 
                             IEE_MotionDataGet(hMotionData, targetChannelList[i],

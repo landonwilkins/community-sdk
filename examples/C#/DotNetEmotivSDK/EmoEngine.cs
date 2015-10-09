@@ -95,61 +95,6 @@ namespace Emotiv
     }
 
     /// <summary>
-    /// Optimization parameter
-    /// </summary> 
-    public class OptimizationParam
-    {
-        IntPtr hOptimizationParam;
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public OptimizationParam()
-        {
-            this.hOptimizationParam = EdkDll.IEE_OptimizationParamCreate();
-        }
-        /// <summary>
-        /// Destructor
-        /// </summary>
-        ~OptimizationParam()
-        {
-            if (this.hOptimizationParam != null)
-            {
-                EdkDll.IEE_OptimizationParamFree(this.hOptimizationParam);
-            }
-        }
-        /// <summary>
-        /// Get a list of vital algorithms of specific suite from optimization parameter
-        /// </summary>
-        /// <param name="suite">suite that you are interested in</param>
-        /// <returns>returns a list of vital algorithm composed of IEE_FacialExpressionAlgo_t, IEE_PerformanceMetricAlgo_t or IEE_MentalCommandAction_t depending on the suite parameter</returns>
-        public UInt32 GetVitalAlgorithm(EdkDll.IEE_EmotivSuite_t suite)
-        {
-            UInt32 vitalAlgorithmBitVectorOut = 0;
-            EmoEngine.errorHandler(EdkDll.IEE_OptimizationGetVitalAlgorithm(hOptimizationParam, suite, out vitalAlgorithmBitVectorOut));
-            return vitalAlgorithmBitVectorOut;
-        }
-
-        /// <summary>
-        /// Set a list of vital algorithms of specific suite to optimization parameter
-        /// </summary>
-        /// <param name="suite">suite that you are interested in</param>
-        /// <param name="vitalAlgorithmBitVector">a list of vital algorithm composed of IEE_FacialExpressionAlgo_t, IEE_PerformanceMetricAlgo_t or IEE_MentalCommandAction_t depended on the suite parameter passed in</param>
-        public void SetVitalAlgorithm(EdkDll.IEE_EmotivSuite_t suite, UInt32 vitalAlgorithmBitVector)
-        {
-            EmoEngine.errorHandler(EdkDll.IEE_OptimizationSetVitalAlgorithm(hOptimizationParam, suite, vitalAlgorithmBitVector));
-        }
-
-        /// <summary>
-        /// Get internal handle of the optimization parameter
-        /// </summary>
-        /// <returns>Pointer which points to memory address representing the internal structure of optimization parameter</returns>
-        public IntPtr GetHandle()
-        {
-            return hOptimizationParam;
-        }
-    }
-
-    /// <summary>
     /// Provide APIs to communicate with EmoEngine 
     /// </summary>
     public class EmoEngine
@@ -158,7 +103,6 @@ namespace Emotiv
         private Dictionary<UInt32, EmoState> lastEmoState = new Dictionary<UInt32, EmoState>();
         private IntPtr hEvent;
 
-        private IntPtr hData;
         private IntPtr hMotionData;
         
         /// <summary>
@@ -306,12 +250,7 @@ namespace Emotiv
         /// <param name="sender">Object which triggers the event</param>
         /// <param name="e">Contains metadata of the event</param>
         public delegate void EmoEngineEmoStateUpdatedEventHandler(object sender, EmoStateUpdatedEventArgs e);
-        /// <summary>
-        /// Function pointer of callback functions which will be called when PerformanceMetricEmoStateUpdatedEvent occurs
-        /// </summary>
-        /// <param name="sender">Object which triggers the event</param>
-        /// <param name="e">Contains metadata of the event</param>
-        public delegate void PerformanceMetricEmoStateUpdatedEventHandler(object sender, EmoStateUpdatedEventArgs e);
+        
         /// <summary>
         /// Function pointer of callback functions which will be called when FacialExpressionEmoStateUpdatedEvent occurs
         /// </summary>
@@ -426,10 +365,7 @@ namespace Emotiv
         /// Raise when EmoEngine related EmoState is updated
         /// </summary>
         public event EmoEngineEmoStateUpdatedEventHandler EmoEngineEmoStateUpdated;
-        /// <summary>
-        /// Raise when PerformanceMetric related EmoState is updated
-        /// </summary>
-        public event PerformanceMetricEmoStateUpdatedEventHandler PerformanceMetricEmoStateUpdated;
+        
         /// <summary>
         /// Raise when FacialExpression related EmoState is updated
         /// </summary>
@@ -442,7 +378,6 @@ namespace Emotiv
         private EmoEngine() 
         {
             hEvent = EdkDll.IEE_EmoEngineEventCreate();
-            hData = EdkDll.IEE_DataCreate();
             hMotionData = EdkDll.IEE_MotionDataCreate();
         }
 
@@ -452,7 +387,6 @@ namespace Emotiv
         ~EmoEngine()
         {
             if (hEvent != IntPtr.Zero) EdkDll.IEE_EmoEngineEventFree(hEvent);
-            if (hData != IntPtr.Zero) EdkDll.IEE_DataFree(hData);
             if (hMotionData != IntPtr.Zero) EdkDll.IEE_MotionDataFree(hMotionData);
         }
 
@@ -832,15 +766,6 @@ namespace Emotiv
                 EmoEngineEmoStateUpdated(this, e);
         }
 
-        /// <summary>
-        /// Handler for PerformanceMetricEmoStateUpated event
-        /// </summary>
-        /// <param name="e">Contains metadata of the event, like userID</param>
-        protected virtual void OnPerformanceMetricEmoStateUpdated(EmoStateUpdatedEventArgs e)
-        {
-            if (PerformanceMetricEmoStateUpdated != null)
-                PerformanceMetricEmoStateUpdated(this, e);
-        }
 
         /// <summary>
         /// Handler for FacialExpressionEmoStateUpdated event
@@ -938,70 +863,6 @@ namespace Emotiv
             OnEmoEngineConnected(new EmoEngineEventArgs(UInt32.MaxValue));
         }
 
-        /// <summary>
-        /// Initializes the local connection to Input EDF File. This function should be called at the beginning of programs that make use of EDF File, most probably in initialization routine or constructor.
-        /// </summary>
-        /// <param name="szInputFilename">The EDF File what is connected</param>
-        public void LocalConnect(string szInputEEGFile, string szInputMotionFile)
-        {
-            errorHandler(EdkDll.IEE_EngineLocalConnect(szInputEEGFile, szInputMotionFile));
-            OnEmoEngineConnected(new EmoEngineEventArgs(UInt32.MaxValue));
-        }
-
-        //EDF file Functions------------
-        
-        /// <summary>
-        /// Record EEG Data and Motion data to EDF file.
-        /// </summary>
-        /// <param name="userId">EmoEngine user ID</param>
-        /// <param name="szInputFilename">The input File what is saved EEG Data</param>
-        /// 
-        public void StartSavingEEGData(UInt32 userId, string szInputFilename, string patientID, string recordID, string date, string time)
-        {
-            EdkDll.IEE_EdfStartSaving(userId, szInputFilename, patientID, recordID, date, time);
-        }
-
-        /// <summary>
-        /// Stop Recording EEG Data and Motion Data to EDF file.
-        /// </summary>
-        public void StopSavingEEGData()
-        {
-            EdkDll.IEE_EdfStopSavingAll();
-        }
-
-        /// <summary>
-        /// Load EEG Data or Motion Data from EDF file.
-        /// </summary>
-        public void StartLoadDatafromEDF()
-        {
-            EdkDll.IEE_EdfStart();
-        }
-
-        /// <summary>
-        /// Stop loading EEG Data or Motion Data from EDF file.
-        /// </summary>
-        public void StopLoadDatafromEDF()
-        {
-            EdkDll.IEE_EdfStop();
-        }
-
-        /// <summary>
-        /// Seek current EDF file
-        /// <summary>
-        public void EdfSeek(UInt32 sec)
-        {
-            EdkDll.IEE_EdfSeek(sec);
-        }
-
-        /// <summary>
-        /// Get total time of EDF file
-        /// <summary>
-        public UInt32 EE_EdfGetTotalTime()
-        {
-            UInt32 totalTime = 0;
-            EdkDll.IEE_EdfGetTotalTime(out totalTime);
-            return totalTime;
-        }
 
         /// <summary>
         /// Initializes the connection to a remote instance of EmoEngine.
@@ -1436,179 +1297,7 @@ namespace Emotiv
         {
             errorHandler(EdkDll.IEE_HeadsetGyroRezero(userId));
         }
-       
-        /// <summary>
-        /// Enables optimization. EmoEngine will try to optimize its performance according to the information passed in with optimization parameter. EmoEngine guarantees the correctness of the results of vital algorithms. For algorithms that are not vital, results are undefined.
-        /// </summary>
-        /// <param name="param">OptimizationParam instance which includes information about how to optimize the performance of EmoEngine.</param>
-        public void OptimizationEnable(OptimizationParam param)
-        {
-            if (param == null)
-            {
-                throw new NullReferenceException();
-            }
-            errorHandler(EdkDll.IEE_OptimizationEnable(param.GetHandle()));
-        }
-
-        /// <summary>
-        /// Determines whether optimization is on
-        /// </summary>
-        /// <returns>
-        /// receives information about whether optimization is on
-        /// </returns>
-        public Boolean OptimizationIsEnabled()
-        {
-            Boolean enabledOut = false;
-            errorHandler(EdkDll.IEE_OptimizationIsEnabled(out enabledOut));
-            return enabledOut;
-        }
-
-        /// <summary>
-        /// Disables optimization
-        /// </summary>
-        public void OptimizationDisable()
-        {
-            errorHandler(EdkDll.IEE_OptimizationDisable());
-        }
-
-        /// <summary>
-        /// Gets optimization parameter.  If optimization is not enabled (this can be checked with IEE_OptimmizationIsEnabled) then the results attached to the returned parameter are undefined.
-        /// </summary>
-        /// <returns></returns>
-        public OptimizationParam OptimizationGetParam()
-        {
-            OptimizationParam param = new OptimizationParam();
-            errorHandler(EdkDll.IEE_OptimizationGetParam(param.GetHandle()));
-            return param;
-        }
-
-        /// <summary>
-        /// Resets all settings and user-specific profile data for the specified detection suite
-        /// </summary>
-        /// <param name="userId">user ID</param>
-        /// <param name="suite">detection suite (FacialExpression, PerformanceMetric, or MentalCommand)</param>
-        /// <param name="detectionBitVector">identifies specific detections.  Set to zero for all detections.</param>
-        public void ResetDetection(UInt32 userId, EdkDll.IEE_EmotivSuite_t suite, UInt32 detectionBitVector)
-        {
-            errorHandler(EdkDll.IEE_ResetDetection(userId, suite, detectionBitVector));
-        }
-
-        //EEG Data-----------
-
-        /// <summary>
-        /// Sets the size of the data buffer. The size of the buffer affects how frequent GetData() needs to be called to prevent data loss.
-        /// </summary>
-        /// <param name="bufferSizeInSec">buffer size in second</param>
-        public void DataSetBufferSizeInSec(Single bufferSizeInSec)
-        {
-            errorHandler(EdkDll.IEE_DataSetBufferSizeInSec(bufferSizeInSec));
-            errorHandler(EdkDll.IEE_MotionDataSetBufferSizeInSec(bufferSizeInSec));
-        }
-
-        /// <summary>
-        /// Returns the size of the data buffer
-        /// </summary>        
-        /// <returns>
-        /// the size of the data buffer
-        /// </returns>
-        public Single DataGetBufferSizeInSec()
-        {
-            Single bufferSizeInSecOut = 0;
-            errorHandler(EdkDll.IEE_DataGetBufferSizeInSec(out bufferSizeInSecOut));
-            errorHandler(EdkDll.IEE_MotionDataGetBufferSizeInSec(out bufferSizeInSecOut));
-            return bufferSizeInSecOut;
-        }
-
-        /// <summary>
-        /// Controls acquisition of data from EmoEngine (which is off by default).
-        /// </summary>
-        /// <param name="userId">user ID</param>
-        /// <param name="enable">If true, then enables data acquisition. If false, then disables data acquisition.</param>
-        public void DataAcquisitionEnable(UInt32 userId, bool enable)
-        {
-            errorHandler(EdkDll.IEE_DataAcquisitionEnable(userId, enable));
-        }
-
-        /// <summary>
-        /// Returns whether data acquisition is enabled
-        /// </summary>
-        /// <param name="userId">user ID</param>     
-        /// <returns>
-        /// receives whether data acquisition is enabled
-        /// </returns>
-        public Boolean IsDataAcquisitionEnabled(UInt32 userId)
-        {
-            Boolean result = false;
-
-            errorHandler(EdkDll.IEE_DataAcquisitionIsEnabled(userId, out result));
-
-            return result;
-        }
-
-        /// <summary>
-        /// Returns latest data since the last call
-        /// </summary>
-        /// <param name="userId">user ID</param>
-        /// <returns>
-        /// receives latest data since the last call
-        /// </returns>
-        public Dictionary<EdkDll.IEE_DataChannel_t, double[]> GetData(UInt32 userId)
-        {
-            Dictionary<EdkDll.IEE_DataChannel_t, double[]> result = new Dictionary<EdkDll.IEE_DataChannel_t, double[]>();
-
-            errorHandler(EdkDll.IEE_DataUpdateHandle(userId, hData));
-
-            UInt32 nSample = 10;
-            errorHandler(EdkDll.IEE_DataGetNumberOfSample(hData, out nSample));
-
-            if (nSample == 0)
-            {
-                return null;
-            }
-
-            foreach (EdkDll.IEE_DataChannel_t channel in Enum.GetValues(typeof(EdkDll.IEE_DataChannel_t)))
-            {
-                if (channel != EdkDll.IEE_DataChannel_t.IED_O1) // Add Pz or O1
-                {
-                    result.Add(channel, new double[nSample]);
-                    errorHandler(EdkDll.IEE_DataGet(hData, channel, result[channel], nSample));
-                }
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Sets marker
-        /// </summary>
-        /// <param name="userId">user ID</param>            
-        /// <param name="marker">value of the marker</param>     
-        public void DataSetMarker(UInt32 userId, Int32 marker)
-        {
-            errorHandler(EdkDll.IEE_DataSetMarker(userId, marker));
-        }
-
-        /// <summary>
-        /// Sets sychronization signal
-        /// </summary>
-        /// <param name="userId">user ID</param>            
-        /// <param name="signal">value of the sychronization signal</param>     
-        public void DataSetSychronizationSignal(UInt32 userId, Int32 signal)
-        {
-            errorHandler(EdkDll.IEE_DataSetSychronizationSignal(userId, signal));
-        }
-
-        /// <summary>
-        /// Gets sampling rate
-        /// </summary>
-        /// <param name="userId">user ID</param>            
-        public UInt32 DataGetSamplingRate(UInt32 userId)
-        {
-            UInt32 samplingRate = 0;
-            errorHandler(EdkDll.IEE_DataGetSamplingRate(userId, out samplingRate));
-            return samplingRate;
-        }
-
+      
         //Motion Data-------------
 
         /// <summary>

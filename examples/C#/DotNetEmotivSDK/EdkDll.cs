@@ -535,11 +535,6 @@ namespace Emotiv
             return Unmanged_IEE_EmoEngineEventCreate();
         }
 
-        public static IntPtr IEE_ProfileEventCreate()
-        {
-            return Unmanged_IEE_ProfileEventCreate();
-        }
-
         public static void IEE_EmoEngineEventFree(IntPtr hEvent)
         {
             Unmanged_IEE_EmoEngineEventFree(hEvent);

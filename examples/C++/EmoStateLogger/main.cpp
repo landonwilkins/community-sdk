@@ -206,13 +206,6 @@ void logEmoState(std::ostream& os, unsigned int userID,
 	os << expressivStates[ FE_FROWN      ] << ","; // furrow
 	os << expressivStates[ FE_SMILE       ] << ","; // smile
 	os << expressivStates[ FE_CLENCH      ] << ","; // clench
-	
-
-	// PerformanceMetric Suite results
-	os << IS_PerformanceMetricGetInstantaneousExcitementScore(eState) << ",";
-	os << IS_PerformanceMetricGetExcitementLongTermScore(eState) << ",";
-
-	os << IS_PerformanceMetricGetEngagementBoredomScore(eState) << ",";
 
 	// MentalCommand Suite results
 	os << static_cast<int>(IS_MentalCommandGetCurrentAction(eState)) << ",";
